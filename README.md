@@ -36,6 +36,7 @@ All the work on the models has been done on online GPUs, so the corresponding .i
 To run these files, they can be opened with either Google Colab or Kaggle and run using their online GPU.
 
 Work done during the hackathon :
+==============================
   Day 1 :
   ==============================
 - Model Training :
