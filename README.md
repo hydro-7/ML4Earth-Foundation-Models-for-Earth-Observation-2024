@@ -2,7 +2,7 @@
 This repository contains all the notebooks we made as a team while participating in the ML4Earth hackathon (https://ml4earth24.devpost.com/).
 As a part of the hackathon, we are required to provide a segmentation map for the Landcover.ai Dataset.
 
-##Our Team
+## Our Team
 ==============================
 - Dr. Shounak Chakraborty
 - Vishnu Meher Vemulapalli
@@ -11,7 +11,7 @@ As a part of the hackathon, we are required to provide a segmentation map for th
 - Siddharth Karmokar
 - Vinayak Sharma
 
-##Semantic segmentation of LandCover.ai dataset
+## Semantic segmentation of LandCover.ai dataset
 ==============================
 
 The dataset used in this project is the [Landcover.ai Dataset](https://landcover.ai.linuxpolska.com/), 
@@ -21,7 +21,7 @@ also accessible on [PapersWithCode](https://paperswithcode.com/paper/landcover-a
 **Please note that I am not the author or owner of this dataset, and I am using it under the terms of the license specified by the original author. 
 All credits for the dataset go to the original author and contributors.**
 
-##Dataset Details
+## Dataset Details
 ==============================
 1. The images have 3 spectral bands (i.e, RGB)
 2. 33 orthophotos with 25 cm per pixel resolution (~9000x9500 px) and 8 orthophotos with 50 cm per pixel resolution (~4200x4700 px)
@@ -30,16 +30,16 @@ All credits for the dataset go to the original author and contributors.**
 
 ![WhatsApp Image 2024-09-18 at 22 00 02_e5ac02f8](https://github.com/user-attachments/assets/32650a6d-9c5c-4b7a-9a79-dfddefc02c3a)
 
-##How to run the Notebooks
+## How to run the Notebooks
 ==============================
 All the work on the models has been done on online GPUs, so the corresponding .ipynb files have been shared in this repository. 
 To run these files, they can be opened with either Google Colab or Kaggle and run using their online GPU.
 
-##Work done during the hackathon :
+## Work done during the hackathon :
 ==============================
 Daywise order of what we did as a team in the Hackathon.
 
-  ###Day 1 :
+  ### Day 1 :
   ==============================
   - Model Training :
     1) Implemented the **Attention UNet** architecture without any image Augmentations. This gave us a **MIoU of 0.6383** after 15 epochs.
@@ -50,5 +50,5 @@ Daywise order of what we did as a team in the Hackathon.
       - There is a large data imbalance in the given dataset. i.e, Some classes have a lot more pixels in the dataset compared to others.
       - To see if this would raise a problem in the future, MIoU needs to be calculated per class, to ensure that the large number of background pixels dont wrongly enhance the MIoU score.
  
-  ###Day 2 :
+  ### Day 2 :
   ==============================
