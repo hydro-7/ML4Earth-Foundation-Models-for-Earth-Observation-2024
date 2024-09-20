@@ -37,6 +37,8 @@ To run these files, they can be opened with either Google Colab or Kaggle and ru
 
 Work done during the hackathon :
 ==============================
+Daywise order of what we did as a team in the Hackathon.
+
   Day 1 :
   ==============================
 - Model Training :
