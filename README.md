@@ -32,4 +32,14 @@ Dataset Details
 
 Day 1 :
 ==============================
-
+- Model Training :
+  1) Implemented the **Attention UNet** architecture without any image Augmentations. This gave us a **MIoU of 0.6383** after 15 epochs.
+  2) Used a **RESNET 50 Encoder Block** on the above Attention UNet (decoder stays the same) with a Pyramid Pooling Layer at the Bottleneck. This was again done without any image Augmentations resulting in a **MIoU of 0.6465** after 10 epochs.
+  3) Further used a Pretrained RESNET 50 with basic image augmentations to get a **MIoU of 0.809** after 25 epochs
+     
+- Complications and Potential Problems :
+    - There is a large data imbalance in the given dataset. i.e, Some classes have a lot more pixels in the dataset compared to others.
+    - To see if this would raise a problem in the future, MIoU needs to be calculated per class, to ensure that the large number of background pixels dont wrongly enhance the MIoU score.
+ 
+Day 2 :
+==============================
