@@ -30,8 +30,14 @@ Dataset Details
 
 ![WhatsApp Image 2024-09-18 at 22 00 02_e5ac02f8](https://github.com/user-attachments/assets/32650a6d-9c5c-4b7a-9a79-dfddefc02c3a)
 
-Day 1 :
+How to run the Notebooks
 ==============================
+All the work on the models has been done on online GPUs, so the corresponding .ipynb files have been shared in this repository. 
+To run these files, they can be opened with either Google Colab or Kaggle and run using their online GPU.
+
+Work done during the hackathon :
+  Day 1 :
+  ==============================
 - Model Training :
   1) Implemented the **Attention UNet** architecture without any image Augmentations. This gave us a **MIoU of 0.6383** after 15 epochs.
   2) Used a **RESNET 50 Encoder Block** on the above Attention UNet (decoder stays the same) with a Pyramid Pooling Layer at the Bottleneck. This was again done without any image Augmentations resulting in a **MIoU of 0.6465** after 10 epochs.
@@ -41,5 +47,5 @@ Day 1 :
     - There is a large data imbalance in the given dataset. i.e, Some classes have a lot more pixels in the dataset compared to others.
     - To see if this would raise a problem in the future, MIoU needs to be calculated per class, to ensure that the large number of background pixels dont wrongly enhance the MIoU score.
  
-Day 2 :
-==============================
+  Day 2 :
+  ==============================
