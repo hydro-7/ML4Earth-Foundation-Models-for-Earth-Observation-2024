@@ -39,7 +39,7 @@ Work done during the hackathon :
 ==============================
 Daywise order of what we did as a team in the Hackathon.
 
-  Day 1 :
+  -Day 1 :
   ==============================
   - Model Training :
     1) Implemented the **Attention UNet** architecture without any image Augmentations. This gave us a **MIoU of 0.6383** after 15 epochs.
@@ -50,5 +50,5 @@ Daywise order of what we did as a team in the Hackathon.
       - There is a large data imbalance in the given dataset. i.e, Some classes have a lot more pixels in the dataset compared to others.
       - To see if this would raise a problem in the future, MIoU needs to be calculated per class, to ensure that the large number of background pixels dont wrongly enhance the MIoU score.
  
-  Day 2 :
+  -Day 2 :
   ==============================
