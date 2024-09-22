@@ -1,5 +1,5 @@
 # ML4Earth
-This repository contains all the notebooks we made as a team while participating in the ML4Earth hackathon (https://ml4earth24.devpost.com/).
+This repository contains the final submission we made as a team while participating in the ML4Earth hackathon (https://ml4earth24.devpost.com/).
 As a part of the hackathon, we are required to provide a segmentation map for the Landcover.ai Dataset.
 
 ## Our Team
@@ -10,9 +10,12 @@ As a part of the hackathon, we are required to provide a segmentation map for th
 - Dhruv Singh
 - Siddharth Karmokar
 - Vinayak Sharma
+- 
+## Overview of our work 
+
+(enter text)
 
 ## Semantic segmentation of LandCover.ai dataset
-
 
 The dataset used in this project is the [Landcover.ai Dataset](https://landcover.ai.linuxpolska.com/), 
 which was originally published with [LandCover.ai: Dataset for Automatic Mapping of Buildings, Woodlands, Water and Roads from Aerial Imagery paper](https://arxiv.org/abs/2005.02264)
@@ -34,20 +37,9 @@ All credits for the dataset go to the original author and contributors.**
 All the work on the models has been done on online GPUs, so the corresponding .ipynb files have been shared in this repository. 
 To run these files, they can be opened with either Google Colab or Kaggle and run using their online GPU.
 
-## Work done during the hackathon :
+## Our approach to solve the problem :
 
-Daywise order of what we did as a team in the Hackathon.
+To solve the problem we did the following : Applied augmentations on the data, Divided the data into loaders, Used a Attention UNet architecture and Finally calculated the mean IoU score as a result.
 
-  ### Day 1 :
 
-  - Model Training :
-    1) Implemented the **Attention UNet** architecture without any image Augmentations. This gave us a **MIoU of 0.6383** after 15 epochs.
-    2) Used a **RESNET 50 Encoder Block** on the above Attention UNet (decoder stays the same) with a Pyramid Pooling Layer at the Bottleneck. This was again done without any image Augmentations resulting in a **MIoU of 0.6465** after 10 epochs.
-    3) Further used a Pretrained RESNET 50 with basic image augmentations to get a **MIoU of 0.809** after 25 epochs
-       
-  - Complications and Potential Problems :
-      - There is a large data imbalance in the given dataset. i.e, Some classes have a lot more pixels in the dataset compared to others.
-      - To see if this would raise a problem in the future, MIoU needs to be calculated per class, to ensure that the large number of background pixels dont wrongly enhance the MIoU score.
- 
-  ### Day 2 :
 
