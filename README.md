@@ -10,7 +10,7 @@ As a part of the hackathon, we are required to provide a segmentation map for th
 - Dhruv Singh
 - Siddharth Karmokar
 - Vinayak Sharma
-- 
+  
 ## Overview of our work 
 
 (enter text)
@@ -39,7 +39,16 @@ To run these files, they can be opened with either Google Colab or Kaggle and ru
 
 ## Our approach to solve the problem :
 
-To solve the problem we did the following : Applied augmentations on the data, Divided the data into loaders, Used a Attention UNet architecture and Finally calculated the mean IoU score as a result.
+To solve the problem we did the following : Applied augmentations on the data, Divided the data into loaders, Used an Attention UNet architecture and Finally calculated the mean IoU score as a result.
+
+### Data Augmentation 
+To improve our results, we used several data augmentations using the Albumentations Library present in PyTorch. We used applied the following augmentations on both the images and masks : 
+- Random Rotate : (details ?)
+- Horizontal Flip : ()
+- RandomSizedCrop : ()
+- HueSaturation : ()
+- RandomizedBrightnessContrast : ()
+  
 
 
 
