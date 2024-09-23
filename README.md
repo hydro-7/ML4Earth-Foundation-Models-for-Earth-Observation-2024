@@ -30,8 +30,6 @@ All credits for the dataset go to the original author and contributors.**
 3. The dataset consists of 5 classes : 1) Woodland 2) Water 3) Roads 4) Buildings and 5) Background
 4. The area split here is : 1.85 km2 of buildings, 72.02 km2 of woodlands, 13.15 km2 of water, 3.5 km2 of roads
 
-![WhatsApp Image 2024-09-18 at 22 00 02_e5ac02f8](https://github.com/user-attachments/assets/32650a6d-9c5c-4b7a-9a79-dfddefc02c3a)
-
 ## How to run the Notebooks
 
 All the work on the models has been done on online GPUs, so the corresponding .ipynb files have been shared in this repository. 
@@ -48,6 +46,9 @@ To improve our results, we used several data augmentations using the Albumentati
 - RandomSizedCrop : ()
 - HueSaturation : ()
 - RandomizedBrightnessContrast : ()
+
+### Creating the Train and Test Subsets
+The enitre dataset has (x) images, where we applied a 80 - 20 Train - Test split resulting in a Train set with (y) images, and a train set with (y) images.
 
 ### Our Model 
 In our model, we used an Attention UNet architecture with a RESNET 50 Encoding Block and a Pyramid Pooling Block at the bottleneck of the UNet. The RESNET we used wasnt pretrained, we just imported the Imagenet weights. A good explanation of the architecture we created can be obtained from this image : (change to updated image)
@@ -68,11 +69,14 @@ We calculated the MIoU and IoU per class of the test images (add more, like hwo 
 
 ### Results 
 (final results)
+- We achieved a MIoU of 0.7620 with a classwise IoU of 0.9130, 0.6775, 0.8732, 0.7952, 0.5256 for Background, Building, Woodland, Water and Road classes respectively.
+- Using the inbuilt Jaccard IoU calculation, we achieved a MIoU of 0.72
+- (f1 score ?)
 
 ### Limitations 
--A fairly large limitation that we faced was that off the large imbalance in the classes in the dataset provided. It would be more clear from the following image, where some classes have a very low number of pixels compared to the other classes (insert picture).
+- A fairly large limitation that we faced was that off the large imbalance in the classes in the dataset provided. It would be more clear from the following image, where some classes have a very low number of pixels compared to the other classes ![WhatsApp Image 2024-09-18 at 22 00 02_e5ac02f8](https://github.com/user-attachments/assets/32650a6d-9c5c-4b7a-9a79-dfddefc02c3a).
+- We tried to implement Cyclic GAN onto the dataset using the external Inria dataset to try to increase the pixel ratio of the buildings class so as to improve the IoU for it. But, due to a lack of time we werent able to complete the implementations upto our desired standard. 
 - The dataset contained very high quality images, and also a large number of such images, so it took a very long time to train the models on online GPUs such as Google Colab & Kaggle.
-- We tried to implement Cyclic GAN onto the dataset to try to increase the pixel ratio among the classes that occurred less, but we werent able to finish the final implementation in the time frame provided.
 
 ### References
 (add some referencs)
