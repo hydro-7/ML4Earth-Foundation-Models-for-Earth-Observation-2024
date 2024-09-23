@@ -111,8 +111,11 @@ Some of the segmented maps we got after training are :
 
 ### References
 http://landcover.ai
+
 https://ieeexplore.ieee.org/document/7780459
+
 https://arxiv.org/abs/1612.01105v2
+
 https://arxiv.org/abs/1804.03999
 
 
