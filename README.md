@@ -98,8 +98,8 @@ We calculated the F1 score, Accuracy and MIoU and IoU per class of the test imag
 ### Limitations 
 - A fairly large limitation that we faced was that off the large imbalance in the classes in the dataset provided. It would be more clear from the following image, where some classes have a very low number of pixels compared to the other classes.
 - ![WhatsApp Image 2024-09-18 at 22 00 02_e5ac02f8](https://github.com/user-attachments/assets/32650a6d-9c5c-4b7a-9a79-dfddefc02c3a).
---To try and counter this problem, we tried to use the weighted Cross Entropy loss, but that did not end up making a big improvement in the results.
--- We also tried to make use of other more cutting edge techniques to conuter this problem, but couldnt impliment it in the time frame allotted to us.
+- To try and counter this problem, we tried to use the weighted Cross Entropy loss, but that did not end up making a big improvement in the results.
+-  We also tried to make use of other more cutting edge techniques to conuter this problem, but couldnt impliment it in the time frame allotted to us.
 - The dataset contained very high quality images, and also a large number of such images, so it took a very long time to train the models on online GPUs such as Google Colab & Kaggle.
 
 ### References
