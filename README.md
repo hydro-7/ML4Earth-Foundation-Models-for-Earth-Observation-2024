@@ -31,7 +31,7 @@ All credits for the dataset go to the original author and contributors.**
 All the work on the models has been done on online GPUs, so the corresponding .ipynb files have been shared in this repository. 
 To run these files, they can be opened with either Google Colab or Kaggle and run using their online GPU.
 
-**NOTE :** We have uploaded two jupyter notebooks. The notebook named "Final_Submission_Code.ipynb" consists of the model that we trained. We then saved that model and used it again in the next notebook "Performance_Scores_of_Final_Submission.ipynb" where we display all the performance metrics.
+**NOTE : We have uploaded two jupyter notebooks. The notebook named "Final_Submission_Code.ipynb" consists of the model that we trained. We then saved that model and used it again in the next notebook "Performance_Scores_of_Final_Submission.ipynb" where we display all the performance metrics.**
 
 ## Our approach to solve the problem :
 
