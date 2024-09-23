@@ -73,10 +73,13 @@ The model for segmentation  that we have designed combines several advanced tech
 **5. Final Convolution:** 
   - A final 1x1 convolution layer reduces the number of output channels to match the number of segmentation classes, producing pixel-wise segmentation masks.
 
+![Model_Arc](https://github.com/user-attachments/assets/06142b52-ce1a-42e4-8396-84ca11ee21cb)
 
-![first_try](https://github.com/user-attachments/assets/0bc6f792-5ffb-479f-b539-29cb1d43db2d)
+![Legend](https://github.com/user-attachments/assets/645aa2de-9e13-4473-a246-05d4ac65bd48)
 
-The pyramid pooling layer is extracted from the popular PSPNet (more details)
+
+
+The pyramid pooling layer is extracted from the popular PSPNet. The detailed architecture of the pyramid pooling block is given below :
 
 ![Pyramid_png](https://github.com/user-attachments/assets/6d79ff86-9b05-444f-aebb-44512bf85375)
 
