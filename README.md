@@ -10,10 +10,6 @@ As a part of the hackathon, we are required to provide a segmentation map for th
 - Dhruv Singh
 - Siddharth Karmokar
 - Vinayak Sharma
-  
-## Overview of our work 
-
-(enter text)
 
 ## Semantic segmentation of LandCover.ai dataset
 
@@ -34,6 +30,8 @@ All credits for the dataset go to the original author and contributors.**
 
 All the work on the models has been done on online GPUs, so the corresponding .ipynb files have been shared in this repository. 
 To run these files, they can be opened with either Google Colab or Kaggle and run using their online GPU.
+
+**NOTE :** We have uploaded two jupyter notebooks. The notebook named "Final_Submission_Code.ipynb" consists of the model that we trained. We then saved that model and used it again in the next notebook "Performance_Scores_of_Final_Submission.ipynb" where we display all the performance metrics.
 
 ## Our approach to solve the problem :
 
@@ -85,21 +83,23 @@ The pyramid pooling layer is extracted from the popular PSPNet. The detailed arc
 
 
 ### Our Loss Functions and Optimizers 
-As an optimizer, we used the basic Adam optimizer with the learning rate set to 0.00001. But, for the loss function, along with using the basic Cross Entropy Loss function, we set up weights to be given as parameters. 
-These weights were calculated by : 
-(weight calc.)
+As an optimizer, we used the basic Adam optimizer with the learning rate set to 0.00001. And, for the loss function, we used basic Cross Entropy Loss function.
 
 ### Metrics and Final Calculations
-We calculated the MIoU and IoU per class of the test images (add more, like hwo we got those numbers)
+We calculated the F1 score, Accuracy and MIoU and IoU per class of the test images. In the main model notebook we also used the inbuilt jaccard index as a performance metric.
 
 ### Results 
-- We achieved a **MIoU of 0.7620** with a classwise IoU of 0.9130, 0.6775, 0.8732, 0.7952, 0.5256 for Background, Building, Woodland, Water and Road classes respectively.
+- ![Results](https://github.com/user-attachments/assets/4db8a0b1-1a60-45bd-bbac-96de19c6070a)
+
+- We achieved a **MIoU of 0.7656** with a classwise IoU of 0.9183, 0.6689, 0.8834, 0.7946, 0.5350 for Background, Building, Woodland, Water and Road classes respectively.
 - Using the **Inbuilt Jaccard** IoU calculation of pytorch, we achieved a **MIoU of 0.72**.
-- (f1 score ?)
+- We got a **precision score of 0.89** and **F1 score of 0.88**.
 
 ### Limitations 
-- A fairly large limitation that we faced was that off the large imbalance in the classes in the dataset provided. It would be more clear from the following image, where some classes have a very low number of pixels compared to the other classes ![WhatsApp Image 2024-09-18 at 22 00 02_e5ac02f8](https://github.com/user-attachments/assets/32650a6d-9c5c-4b7a-9a79-dfddefc02c3a).
-- To try and counter this problem, we tried to use the weighted Cross Entropy loss, but that did not end up making a big improvement in the results.
+- A fairly large limitation that we faced was that off the large imbalance in the classes in the dataset provided. It would be more clear from the following image, where some classes have a very low number of pixels compared to the other classes.
+- ![WhatsApp Image 2024-09-18 at 22 00 02_e5ac02f8](https://github.com/user-attachments/assets/32650a6d-9c5c-4b7a-9a79-dfddefc02c3a).
+--To try and counter this problem, we tried to use the weighted Cross Entropy loss, but that did not end up making a big improvement in the results.
+-- We also tried to make use of other more cutting edge techniques to conuter this problem, but couldnt impliment it in the time frame allotted to us.
 - The dataset contained very high quality images, and also a large number of such images, so it took a very long time to train the models on online GPUs such as Google Colab & Kaggle.
 
 ### References
