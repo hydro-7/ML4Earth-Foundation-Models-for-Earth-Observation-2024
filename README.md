@@ -96,7 +96,7 @@ We calculated the F1 score, Accuracy and MIoU and IoU per class of the test imag
 - We got a **precision score of 0.89** and **F1 score of 0.88**.
 
 ### Segmented Maps 
-Some of the segmented maps we got after training are :
+Some of the segmented maps we got after training on the test set are :
 - ![Segment_Map](https://github.com/user-attachments/assets/508ae040-2115-4b59-8351-440152b5cc7f)
 - ![Segment_Map2](https://github.com/user-attachments/assets/0d084929-cd50-4112-b967-312ce5a16ea7)
 
