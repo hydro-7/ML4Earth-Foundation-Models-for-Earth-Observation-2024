@@ -41,11 +41,11 @@ To solve the problem we did the following : Applied augmentations on the data, D
 
 ### Data Augmentation 
 To improve our results, we used several data augmentations using the Albumentations Library present in PyTorch. We used applied the following augmentations on 50% of the images and masks : 
-- Random Rotate : Rotates the images by 90 degrees to ensure that the model can identify the images taken from different points of views.
-- Horizontal Flip : Flips the images horizontally, it helps the model become invariant to horizontal orientation changes.
-- RandomSizedCrop : Crops a random portion of the image and resizes it to a standard size as cropping different sections of the image makes the model less dependent on the exact location of objects in the image.
-- HueSaturation : This function is used to modify the hue, saturation, and the HSV value of an image. We set the Hue Shift to 40 units, Saturation Shift to 40 units and the Brightness Shift to 30 units. It enables the model to make accurate predictions even with lighting and colour changes.
-- RandomizedBrightnessContrast : This technique introduces variations in how bright or dark and how sharp or soft the image appears. It helps make predictions even with differences in image quality, focus, or lighting conditions.
+- **Random Rotate :** Rotates the images by 90 degrees to ensure that the model can identify the images taken from different points of views.
+- **Horizontal Flip :** Flips the images horizontally, it helps the model become invariant to horizontal orientation changes.
+- **RandomSizedCrop :** Crops a random portion of the image and resizes it to a standard size as cropping different sections of the image makes the model less dependent on the exact location of objects in the image.
+- **HueSaturation :** This function is used to modify the hue, saturation, and the HSV value of an image. We set the Hue Shift to 40 units, Saturation Shift to 40 units and the Brightness Shift to 30 units. It enables the model to make accurate predictions even with lighting and colour changes.
+- **RandomizedBrightnessContrast :** This technique introduces variations in how bright or dark and how sharp or soft the image appears. It helps make predictions even with differences in image quality, focus, or lighting conditions.
 
 ### Creating the Train and Test Subsets
 The enitre dataset has 10674 images, where we applied a 80 - 20 Train - Test split resulting in a Train set with 8539 images, and a train set with 2135 images.
@@ -57,7 +57,8 @@ In our model, we used an Attention UNet architecture with a RESNET 50 Encoding B
 
 The pyramid pooling layer is extracted from the popular PSPNet (more details)
 
-(pyramid pooling image)
+![Pyramid_png](https://github.com/user-attachments/assets/6d79ff86-9b05-444f-aebb-44512bf85375)
+
 
 ### Our Loss Functions and Optimizers 
 As an optimizer, we used the basic Adam optimizer with the learning rate set to 0.00001. But, for the loss function, along with using the basic Cross Entropy Loss function, we set up weights to be given as parameters. 
@@ -68,14 +69,13 @@ These weights were calculated by :
 We calculated the MIoU and IoU per class of the test images (add more, like hwo we got those numbers)
 
 ### Results 
-(final results)
-- We achieved a MIoU of 0.7620 with a classwise IoU of 0.9130, 0.6775, 0.8732, 0.7952, 0.5256 for Background, Building, Woodland, Water and Road classes respectively.
-- Using the inbuilt Jaccard IoU calculation, we achieved a MIoU of 0.72
+- We achieved a **MIoU of 0.7620** with a classwise IoU of 0.9130, 0.6775, 0.8732, 0.7952, 0.5256 for Background, Building, Woodland, Water and Road classes respectively.
+- Using the **Inbuilt Jaccard** IoU calculation of pytorch, we achieved a **MIoU of 0.72**.
 - (f1 score ?)
 
 ### Limitations 
 - A fairly large limitation that we faced was that off the large imbalance in the classes in the dataset provided. It would be more clear from the following image, where some classes have a very low number of pixels compared to the other classes ![WhatsApp Image 2024-09-18 at 22 00 02_e5ac02f8](https://github.com/user-attachments/assets/32650a6d-9c5c-4b7a-9a79-dfddefc02c3a).
-- We tried to implement Cyclic GAN onto the dataset using the external Inria dataset to try to increase the pixel ratio of the buildings class so as to improve the IoU for it. But, due to a lack of time we werent able to complete the implementations upto our desired standard. 
+- To try and counter this problem, we tried to use the weighted Cross Entropy loss, but that did not end up making a big improvement in the results.
 - The dataset contained very high quality images, and also a large number of such images, so it took a very long time to train the models on online GPUs such as Google Colab & Kaggle.
 
 ### References
