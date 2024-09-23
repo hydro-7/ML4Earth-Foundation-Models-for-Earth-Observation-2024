@@ -95,6 +95,13 @@ We calculated the F1 score, Accuracy and MIoU and IoU per class of the test imag
 - Using the **Inbuilt Jaccard** IoU calculation of pytorch, we achieved a **MIoU of 0.72**.
 - We got a **precision score of 0.89** and **F1 score of 0.88**.
 
+### Segmented Maps 
+Some of the segmented maps we got after training are :
+- ![Segment_Map](https://github.com/user-attachments/assets/508ae040-2115-4b59-8351-440152b5cc7f)
+- ![Segment_Map2](https://github.com/user-attachments/assets/0d084929-cd50-4112-b967-312ce5a16ea7)
+
+
+
 ### Limitations 
 - A fairly large limitation that we faced was that off the large imbalance in the classes in the dataset provided. It would be more clear from the following image, where some classes have a very low number of pixels compared to the other classes.
 - ![WhatsApp Image 2024-09-18 at 22 00 02_e5ac02f8](https://github.com/user-attachments/assets/32650a6d-9c5c-4b7a-9a79-dfddefc02c3a).
