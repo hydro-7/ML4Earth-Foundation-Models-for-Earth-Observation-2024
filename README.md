@@ -110,7 +110,10 @@ Some of the segmented maps we got after training are :
 - The dataset contained very high quality images, and also a large number of such images, so it took a very long time to train the models on online GPUs such as Google Colab & Kaggle.
 
 ### References
-(add some referencs)
+http://landcover.ai
+https://ieeexplore.ieee.org/document/7780459
+https://arxiv.org/abs/1612.01105v2
+https://arxiv.org/abs/1804.03999
 
 
 
