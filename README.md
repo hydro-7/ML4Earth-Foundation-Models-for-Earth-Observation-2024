@@ -52,16 +52,17 @@ The enitre dataset has 10674 images, where we applied a 80 - 20 Train - Test spl
 
 ### Our Model 
 The model for segmentation  that we have designed combines several advanced techniques to improve performance in challenging tasks. Here's a breakdown of the model's features : 
+
 **1. Backbone (ResNet50) Encoder:** The model uses ResNet50, initialized with pretrained weights from ImageNet, to extract hierarchical features from the input. The encoder captures rich feature representations at different levels, progressively downsampling the image to identify both low- and high-level features.
 
 **2. Pyramid Pooling Module (Applied at bottleneck):** The deepest layer of the encoder outputs feature maps with high-level information. The Pyramid Pooling Module is applied here to capture multi-scale context. It performs pooling at different scales (local and global), and the resulting features are upsampled to the original feature map size and concatenated. This helps improve segmentation by considering both fine details and broader context.
 
-**3. Attention Mechanism:**
-  Attention blocks are applied at each decoding step. These blocks help the model focus on important regions by refining the features from the encoder before passing them to the decoder. Attention is used to align feature maps coming from the encoder and decoder to make sure only the relevant spatial features are emphasized.
-**4. Upsampling and Decoding:**
-  The decoder gradually upscales the feature maps back to the original image size using upconvolution (transpose convolution). Skip connections between corresponding encoder and decoder layers are used to preserve spatial details. Some additional upsampling layers are also applied in specific layers to ensure that the output matches the original input size.
-**5. Final Convolution:**
-  A final 1x1 convolution layer reduces the number of output channels to match the number of segmentation classes, producing pixel-wise segmentation masks.
+**3. Attention Mechanism:** Attention blocks are applied at each decoding step. These blocks help the model focus on important regions by refining the features from the encoder before passing them to the decoder. Attention is used to align feature maps coming from the encoder and decoder to make sure only the relevant spatial features are emphasized.
+
+**4. Upsampling and Decoding:** The decoder gradually upscales the feature maps back to the original image size using upconvolution (transpose convolution). Skip connections between corresponding encoder and decoder layers are used to preserve spatial details. Some additional upsampling layers are also applied in specific layers to ensure that the output matches the original input size.
+
+**5. Final Convolution:** A final 1x1 convolution layer reduces the number of output channels to match the number of segmentation classes, producing pixel-wise segmentation masks.
+
 
 ![first_try](https://github.com/user-attachments/assets/0bc6f792-5ffb-479f-b539-29cb1d43db2d)
 
