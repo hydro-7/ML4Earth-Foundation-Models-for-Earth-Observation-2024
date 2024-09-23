@@ -40,15 +40,15 @@ To run these files, they can be opened with either Google Colab or Kaggle and ru
 To solve the problem we did the following : Applied augmentations on the data, Divided the data into loaders, Used an Attention UNet architecture and Finally calculated the mean IoU score as a result.
 
 ### Data Augmentation 
-To improve our results, we used several data augmentations using the Albumentations Library present in PyTorch. We used applied the following augmentations on both the images and masks : 
-- Random Rotate : (details ?)
-- Horizontal Flip : ()
-- RandomSizedCrop : ()
-- HueSaturation : ()
-- RandomizedBrightnessContrast : ()
+To improve our results, we used several data augmentations using the Albumentations Library present in PyTorch. We used applied the following augmentations on 50% of the images and masks : 
+- Random Rotate : Rotates the images by 90 degrees to ensure that the model can identify the images taken from different points of views.
+- Horizontal Flip : Flips the images horizontally, it helps the model become invariant to horizontal orientation changes.
+- RandomSizedCrop : Crops a random portion of the image and resizes it to a standard size as cropping different sections of the image makes the model less dependent on the exact location of objects in the image.
+- HueSaturation : This function is used to modify the hue, saturation, and the HSV value of an image. We set the Hue Shift to 40 units, Saturation Shift to 40 units and the Brightness Shift to 30 units. It enables the model to make accurate predictions even with lighting and colour changes.
+- RandomizedBrightnessContrast : This technique introduces variations in how bright or dark and how sharp or soft the image appears. It helps make predictions even with differences in image quality, focus, or lighting conditions.
 
 ### Creating the Train and Test Subsets
-The enitre dataset has (x) images, where we applied a 80 - 20 Train - Test split resulting in a Train set with (y) images, and a train set with (y) images.
+The enitre dataset has 10674 images, where we applied a 80 - 20 Train - Test split resulting in a Train set with 8539 images, and a train set with 2135 images.
 
 ### Our Model 
 In our model, we used an Attention UNet architecture with a RESNET 50 Encoding Block and a Pyramid Pooling Block at the bottleneck of the UNet. The RESNET we used wasnt pretrained, we just imported the Imagenet weights. A good explanation of the architecture we created can be obtained from this image : (change to updated image)
