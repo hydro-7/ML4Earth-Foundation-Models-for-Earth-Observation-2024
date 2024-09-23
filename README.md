@@ -53,6 +53,7 @@ The enitre dataset has 10674 images, where we applied a 80 - 20 Train - Test spl
 ### Our Model 
 In our model, we used an Attention UNet architecture with a RESNET 50 Encoding Block and a Pyramid Pooling Block at the bottleneck of the UNet. The RESNET we used wasnt pretrained, we just imported the Imagenet weights. A good explanation of the architecture we created can be obtained from this image : (change to updated image)
 
+
 ![first_try](https://github.com/user-attachments/assets/0bc6f792-5ffb-479f-b539-29cb1d43db2d)
 
 The pyramid pooling layer is extracted from the popular PSPNet (more details)
