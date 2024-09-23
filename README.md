@@ -52,10 +52,10 @@ The enitre dataset has 10674 images, where we applied a 80 - 20 Train - Test spl
 
 ### Our Model 
 The model for segmentation  that we have designed combines several advanced techniques to improve performance in challenging tasks. Here's a breakdown of the model's features : 
-**1. Backbone (ResNet50) Encoder:**
-  The model uses ResNet50, initialized with pretrained weights from ImageNet, to extract hierarchical features from the input. The encoder captures rich feature representations at different levels, progressively downsampling the image to identify both low- and high-level features.
-**2. Pyramid Pooling Module (Applied at bottleneck):**
-  The deepest layer of the encoder outputs feature maps with high-level information. The Pyramid Pooling Module is applied here to capture multi-scale context. It performs pooling at different scales (local and global), and the resulting features are upsampled to the original feature map size and concatenated. This helps improve segmentation by considering both fine details and broader context.
+**1. Backbone (ResNet50) Encoder:** The model uses ResNet50, initialized with pretrained weights from ImageNet, to extract hierarchical features from the input. The encoder captures rich feature representations at different levels, progressively downsampling the image to identify both low- and high-level features.
+
+**2. Pyramid Pooling Module (Applied at bottleneck):** The deepest layer of the encoder outputs feature maps with high-level information. The Pyramid Pooling Module is applied here to capture multi-scale context. It performs pooling at different scales (local and global), and the resulting features are upsampled to the original feature map size and concatenated. This helps improve segmentation by considering both fine details and broader context.
+
 **3. Attention Mechanism:**
   Attention blocks are applied at each decoding step. These blocks help the model focus on important regions by refining the features from the encoder before passing them to the decoder. Attention is used to align feature maps coming from the encoder and decoder to make sure only the relevant spatial features are emphasized.
 **4. Upsampling and Decoding:**
