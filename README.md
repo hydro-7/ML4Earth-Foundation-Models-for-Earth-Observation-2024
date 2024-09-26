@@ -1,4 +1,4 @@
-# ML4Earth
+# ML4Earth (2nd Place Winners!)
 This repository contains the final submission we made as a team while participating in the ML4Earth hackathon (https://ml4earth24.devpost.com/).
 As a part of the hackathon, we are required to provide a segmentation map for the Landcover.ai Dataset.
 
