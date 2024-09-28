@@ -118,7 +118,8 @@ https://arxiv.org/abs/1612.01105v2
 
 https://arxiv.org/abs/1804.03999
 
-
+### Video Submission
+Our video submission for the hackathon : https://www.youtube.com/watch?v=ELwzgWHuA2s&t=11s
 
   
 
